@@ -10,7 +10,11 @@ Still a heavy work on progress, and I am bad at UI.
 
 Stuff used:
 
-- https://github.com/riverar/sample-win32-acrylicblur
-- https://github.com/hardcodet/wpf-notifyicon
-- https://github.com/pusta/WinPiStats
-- https://github.com/bdfin/PiholeStats
+- https://github.com/hardcodet/wpf-notifyicon for the framework of the app
+- https://github.com/riverar/sample-win32-acrylicblur for the blurred background effect
+- https://github.com/pusta/WinPiStats for inspiration on working with tray icons & autostart regkeys
+- https://github.com/bdfin/PiholeStats for the API parsing
+
+See also:
+
+- https://github.com/amiantos/pibar
