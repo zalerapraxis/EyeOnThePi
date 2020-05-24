@@ -13,7 +13,7 @@
         <!-- merge NotifyIcon and related stuff into the application -->
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="NotifyIconResources.xaml" />
+                <ResourceDictionary Source="Windows/NotifyIconMenu.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
 

@@ -94,7 +94,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Flyout.xaml">
+    <Compile Include="Helpers\AcrylicHelper.cs" />
+    <Compile Include="Windows\Settings.xaml.cs">
+      <DependentUpon>Settings.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Windows\PiholeStatsFlyout.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -102,21 +106,25 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DelegateCommand.cs" />
-    <Compile Include="Flyout.xaml.cs">
-      <DependentUpon>Flyout.xaml</DependentUpon>
+    <Compile Include="Helpers\DelegateCommandHelper.cs" />
+    <Compile Include="Windows\PiholeStatsFlyout.xaml.cs">
+      <DependentUpon>PiholeStatsFlyout.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="NotifyIconResources.xaml">
+    <Page Include="Windows\NotifyIconMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Settings.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\PiholeApiStatsViewModel.cs" />
+    <Compile Include="Models\PiholeStatsFlyoutViewModel.cs" />
     <Compile Include="Models\PiholeStatsJsonModel.cs" />
-    <Compile Include="Models\NotifyIconViewModel.cs" />
-    <Compile Include="PiholeApi.cs" />
+    <Compile Include="Models\NotifyIconMenuViewModel.cs" />
+    <Compile Include="Helpers\PiholeApiHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

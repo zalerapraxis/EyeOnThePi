@@ -16,15 +16,18 @@ namespace EyeOnThePi
     /// </summary>
     public partial class App : Application
     {
-        private TaskbarIcon notifyIcon;
-        private DispatcherTimer timer;
+        public PiholeStatsFlyoutViewModel piholeApiStatsViewModel = new PiholeStatsFlyoutViewModel();
 
+        private TaskbarIcon notifyIcon;
+        
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
 
-            //create the notifyicon (it's a resource declared in NotifyIconResources.xaml
+            // create the notifyicon (it's a resource declared in NotifyIconResources.xaml
             notifyIcon = (TaskbarIcon)FindResource("NotifyIcon");
+
+            piholeApiStatsViewModel.StartTimer();
         }
 
 

@@ -11,7 +11,8 @@
     <ContextMenu x:Shared="false" x:Key="SysTrayMenu">
         <!--<MenuItem Header="Show Window" Command="{Binding ShowWindowCommand}" />
         <MenuItem Header="Hide Window" Command="{Binding HideWindowCommand}" />-->
-        <MenuItem Header="Autostart" Command="{Binding HideWindowCommand}" />
+        <MenuItem Header="Autostart" IsCheckable="{Binding AutoStart, Mode=TwoWay}" />
+        <MenuItem Header="Settings" Command="{Binding ShowSettingsWindowCommand}" />
         <Separator />
         <MenuItem Header="Exit" Command="{Binding ExitApplicationCommand}" />
     </ContextMenu>
@@ -19,7 +20,7 @@
 
     <!-- the application's NotifyIcon - started from App.xaml.cs. Declares its own view model. -->
     <tb:TaskbarIcon x:Key="NotifyIcon"
-                    IconSource="Resources/WPSIcon.ico"
+                    IconSource="/Resources/WPSIcon.ico"
                     ToolTipText="Double-click for window, right-click for menu"
                     LeftClickCommand="{Binding ShowWindowCommand}"
                     ContextMenu="{StaticResource SysTrayMenu}">

@@ -6,7 +6,7 @@ namespace EyeOnThePi
     /// <summary>
     /// Simplistic delegate command for the demo.
     /// </summary>
-    public class DelegateCommand : ICommand
+    public class DelegateCommandHelper : ICommand
     {
         public Action CommandAction { get; set; }
         public Func<bool> CanExecuteFunc { get; set; }

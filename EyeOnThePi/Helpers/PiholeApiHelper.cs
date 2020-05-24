@@ -9,7 +9,7 @@ using EyeOnThePi.Models;
 
 namespace EyeOnThePi
 {
-    class PiholeApi
+    class PiholeApiHelper
     {
         // make this adjustable later
         public static string piholeAddress = "192.168.254.101";

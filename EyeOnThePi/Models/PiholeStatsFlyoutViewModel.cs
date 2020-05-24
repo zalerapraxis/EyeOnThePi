@@ -8,7 +8,7 @@ using System.Windows.Threading;
 
 namespace EyeOnThePi.Models
 {
-    public class PiholeApiStatsViewModel : INotifyPropertyChanged
+    public class PiholeStatsFlyoutViewModel : INotifyPropertyChanged
     {
         private string status;
         public string Status
@@ -149,7 +149,7 @@ namespace EyeOnThePi.Models
             if (((DispatcherTimer)sender).Interval == TimeSpan.FromSeconds(0))
                 ((DispatcherTimer)sender).Interval = TimeSpan.FromSeconds(3);
 
-            var stats = await PiholeApi.GetStatsAsync();
+            var stats = await PiholeApiHelper.GetStatsAsync();
 
             Status = stats.Status;
             DomainsInBlocklist = stats.DomainsInBlocklist;
